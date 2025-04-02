@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced Reading List</title>
+  <link rel="stylesheet" href="sidebar.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Reading List</h1>
+      <div class="header-buttons">
+        <button id="add-note-to-selected" title="Add/edit note" class="text-btn">Add Note</button>
+        <button id="add-current-tab" title="Add current tab">+</button>
+        <button id="toggle-sidebar" title="Hide sidebar" class="icon-btn">⇨</button>
+      </div>
+    </div>
+    
+    <div class="tab-container">
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="unread">Unread</button>
+        <button class="tab-btn" data-tab="read">Read</button>
+      </div>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search...">
+        <div id="search-clear" class="search-clear hidden">×</div>
+      </div>
+    </div>
+    
+    <div class="list-container">
+      <div id="unread-list" class="reading-list active"></div>
+      <div id="read-list" class="reading-list"></div>
+      <div id="empty-state" class="empty-state hidden">
+        <p>Your reading list is empty</p>
+        <p class="empty-hint">Click + to add the current tab</p>
+      </div>
+      <div id="no-results" class="empty-state hidden">
+        <p>No matching results</p>
+      </div>
+    </div>
+  </div>
+  
+  <script src="sidebar.js"></script>
+</body>
+</html>
